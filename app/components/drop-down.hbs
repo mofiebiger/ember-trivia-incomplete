@@ -1,0 +1,14 @@
+<div
+  data-test-drop-down
+  class="drop-down"
+  name={{@name}}
+>
+  <PowerSelect
+    @selected={{@selected}}
+    @placeholder={{@placeholder}}
+    @options={{@options}}
+    @onChange={{action (mut @selected)}} as |values|
+  >
+    {{values}}
+  </PowerSelect>
+</div>
