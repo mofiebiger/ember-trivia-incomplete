@@ -1,5 +1,8 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="application-container">
+  <Header
+    @title="Mo's Trivia Page
+  "/>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>

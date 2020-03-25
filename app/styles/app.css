@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+
+body {
+  margin: 0;
+  background: #EDF2F5;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+.application-header {
+  background-color: #253746;
+  color: #EA8651;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+	height: auto;
+}
+
+.drop-down {
+  margin: 20px;
+  width: 50%;
+}
+
+.submit-button {
+  justify-content: center;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #30B3C8;
+  display: flex;
+  margin: 20px;
+  border: 0px;
+  color: white;
+  width: 100px;
+  font-size: 15px;
+
+}
+
+.query-container {
+  justify-content: center;
+  display: flex;
+}
