@@ -1,0 +1,31 @@
+<div class="query-container">
+  <DropDown
+    data-test-select-category
+    class="select-category"
+    @placeholder="Select category"
+    @options={{array "Sports"}}
+    @selected={{this.category}}
+  />
+
+  <DropDown
+    data-test-select-difficulty
+    class="select-difficulty"
+    @placeholder="Select difficulty"
+    @options={{array "Easy" "Medium" "Hard"}}
+    @selected={{this.difficulty}}
+  />
+  <SubmitButton
+    data-test-play-button
+    @onClick={{action this.handleSubmit}}
+  >Play
+  </SubmitButton>
+</div>
+
+<div class="result-container" data-test-result-info>
+  {{#each @info as |info|}}
+    {{#if (and (eq this.category info.category) (eq this.difficulty info.difficulty))}}
+      <h1>{{info.category}}</h1>
+      <p>{{info.question}}</p>
+    {{/if}}
+  {{/each}}
+</div>
