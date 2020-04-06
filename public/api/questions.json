@@ -4,36 +4,139 @@
       "type": "questions",
       "id": "Q1",
       "attributes": {
-        "category": "Sports",
-        "question-type": "multiple",
+        "category": "Ember.JS",
         "difficulty": "Easy",
-        "question": "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur? ",
-        "correct-answer": "Richard Branson",
-        "incorrect-answers": ["Alan Sugar", "Donald Trump", "Bill Gates"]
+        "question": "What is Ember.JS?",
+        "correct-answer": "An open-source JavaScript web framework.",
+        "options": [
+          "An open-source JavaScript web framework.",
+          "A small piece of burning or glowing coal or wood in a dying fire.",
+          "A programming language.",
+          "A temperature mug."
+        ]
       }
     },
     {
       "type": "questions",
       "id": "Q2",
       "attributes": {
-        "category": "Sports",
-        "question-type": "multiple",
-        "difficulty": "Medium",
-        "question": "Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?",
-        "correct-answer": "Wales",
-        "incorrect-answers": ["Moldova", "Czech Republic", "Denmark"]
+        "category": "Ember.JS",
+        "difficulty": "Easy",
+        "question": "Ember consists of five key concepts. What are they?",
+        "correct-answer": "Routes, Models, Templates, Components, Services",
+        "options": [
+          "JavaScript, Models, Templates, Components, Services",
+          "JavaScript, Routes, Templates, Components, Services",
+          "Routes, Models, Templates, Components, Services",
+          "JavaScript, Routes, Templates, Components, DOM"
+        ]
       }
     },
     {
       "type": "questions",
       "id": "Q3",
       "attributes": {
-        "category": "Sports",
-        "question-type": "multiple",
-        "difficulty": "Hard",
+        "category": "Ember.JS",
+        "difficulty": "Easy",
+        "question": "What are Templates (Handlebars)",
+        "correct-answer": "Builds the application's HTML into DOM elements",
+        "options": [
+          "Its just HTML",
+          "Builds the application's HTML into DOM elements",
+          "Another programming language",
+          "Designs which Ember gives to developers to create beautiful web pages."
+        ]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q4",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Medium",
+        "question": "Why is Ember like Ruby on Rails",
+        "correct-answer": "Ember follows the 'Convention over Configuration' and 'Don't Repeat Yourself' principles.",
+        "options": [
+          "There is Ruby used in Ember.",
+          "The founder of Ruby on Rails is also the founder of Ember.",
+          "Ember follows the 'Convention over Configuration' and 'Don't Repeat Yourself' principles.",
+          "Ember and Ruby on Rails are easy to learn frameworks."
+        ]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q5",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Medium",
+        "question": "Who are some companies that have endorsed Ember.JS?",
+        "correct-answer": "LinkedIn, Apple Music, Square",
+        "options": [
+          "Facebook, Chipotle, Google",
+          "Facebook, Chipotle, Google",
+          "LinkedIn, Apple Music, Google",
+          "LinkedIn, Apple Music, Square"
+        ]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q6",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Medium",
         "question": "Which company did Valve cooperate with in the creation of the Vive?",
-        "correct-answer": "HTC",
-        "incorrect-answers": ["Oculus", "Google", "Razer"]
+        "correct-answer": "Provides animation support for Ember applications.",
+        "options": [
+          "Oculus",
+          "Google",
+          "Razer",
+          "Provides animation support for Ember applications"
+        ]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q7",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Hard",
+        "question": "What is Liquid Fire?",
+        "correct-answer": "Provides animation support for Ember applications.",
+        "options": [
+          "The name of Ember's Development Team.",
+          "Ember's version of git.",
+          "Ember's online education forum.",
+          "Provides animation support for Ember applications."
+        ]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q8",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Hard",
+        "question": "Who Founded Ember.JS?",
+        "correct-answer": "Yehuda Katz",
+        "options": ["Steve Jobs", "Yehuda Katz", "Bill Gates", "Janese Swanson"]
+      }
+    },
+    {
+      "type": "questions",
+      "id": "Q9",
+      "attributes": {
+        "category": "Ember.JS",
+        "difficulty": "Hard",
+        "question": "What does the concept stability without stagnation mean?",
+        "correct-answer": "Backwards compatibility is important and can be maintained while still innovating and evolving the framework.",
+        "options": [
+          "Backwards compatibility is important and can be maintained while still innovating and evolving the framework.",
+          "Ember wants to move forward as fast as possible and be the best framework out there.",
+          "Backwards compatibility isn't very important.",
+          "The only thing that matters to Ember is backward compatibility."
+        ]
       }
     }
   ]

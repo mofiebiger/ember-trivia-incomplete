@@ -1,0 +1,28 @@
+<div class="content-box-container">
+  <div class="content-box">
+      <div class="content-box-header">
+        <Header
+            @title={{@title}}
+            @style="plain-header"
+          />
+      </div>
+
+      <div class="content-box-body">
+        Hello World!
+      </div>
+
+      <div class="content-box-footer">
+        {{#if (eq @button "true")}}
+
+          <LinkTo
+            class="submit-button"
+            @route="trivia-data"
+            @query={{hash category=data.category difficulty=data.difficulty id="Q4"}}
+          >
+            {{@buttonTitle}}
+          </LinkTo>
+
+        {{/if}}
+      </div>
+  </div>
+</div>

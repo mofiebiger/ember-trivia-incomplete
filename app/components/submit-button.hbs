@@ -1,7 +1,7 @@
 <button
   data-test-submit-button
   name={{@name}}
-  class="submit-button"
+  class="submit-button {{if (eq @style "answer-button") "answer-button"}}"
   onClick={{@onClick}}
   ...attributes
 >

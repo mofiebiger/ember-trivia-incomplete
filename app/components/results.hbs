@@ -1,0 +1,46 @@
+<div class="trivia-box-container">
+  <div class="trivia-box">
+    <div class="answer-header">
+      <Header
+          @title="Results"
+          @style="plain-header"
+        />
+    </div>
+    {{log "model: " @score}}
+    <div class="answer-body">
+      {{#if (or (eq @score "0") (eq @score undefined))}}
+        <div class="results-container">
+          Looks like you need a little more work...
+          <img src="../assets/zero-points.png" class="result-image" />
+          <h1>Your Score: 0%</h1>
+        </div>
+      {{else if (eq @score "100")}}
+        <div class="results-container">
+          You're an Ember rockstar!
+          <img src="../assets/three-points.png" class="result-image" />
+          <h1>Your Score: {{@score}}%</h1>
+        </div>
+      {{else if (and (gt @score "0") (lte @score "49"))}}
+        <div class="results-container">
+          Getting a little closer!
+          <img src="../assets/one-point.png" class="result-image" />
+          <h1>Your Score: {{@score}}%</h1>
+        </div>
+      {{else if (and (gt @score "49") (lte @score "99"))}}
+        <div class="results-container">
+          You're more then half way there!!
+          <img src="../assets/two-points.png" class="result-image" />
+          <h1>Your Score: {{@score}}%</h1>
+        </div>
+      {{/if}}
+    </div>
+
+    <div class="trivia-box-footer"></div>
+  </div>
+  <LinkTo
+    class="submit-button"
+    @route="start"
+  >
+    Play Again
+  </LinkTo>
+</div>

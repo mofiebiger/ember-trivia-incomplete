@@ -1,4 +1,8 @@
-<div class="application-header">
-  <h1>{{@title}}</h1>
+<div class="stylized-header {{if (eq @style "plain-header") "plain-header"}}">
+  {{#if @title}}
+    <h1>{{@title}}</h1>
+  {{else}}
+    <img src={{@src}} class="header-img" />
+  {{/if}}
 </div>
 {{yield}}

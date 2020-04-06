@@ -1,31 +1,44 @@
-<div class="query-container">
-  <DropDown
-    data-test-select-category
-    class="select-category"
-    @placeholder="Select category"
-    @options={{array "Sports"}}
-    @selected={{this.category}}
-  />
+<div class="trivia-box">
+  <div class="question-header">
+    <Header
+        @title="Pick your trivia criteria"
+        @style="plain-header"
+      />
+  </div>
+  <div class="answer-body">
+    <DropDown
+      data-test-select-category
+      class="select-category"
+      @placeholder="Select category"
+      @options={{array "Sports"}}
+      @selected={{this.category}}
+      @onChange={{action (mut this.category)}}
+    />
 
-  <DropDown
-    data-test-select-difficulty
-    class="select-difficulty"
-    @placeholder="Select difficulty"
-    @options={{array "Easy" "Medium" "Hard"}}
-    @selected={{this.difficulty}}
-  />
-  <SubmitButton
-    data-test-play-button
-    @onClick={{action this.handleSubmit}}
-  >Play
-  </SubmitButton>
-</div>
+    <DropDown
+      data-test-select-difficulty
+      class="select-difficulty"
+      @placeholder="Select difficulty"
+      @options={{array "Easy" "Medium" "Hard"}}
+      @selected={{this.difficulty}}
+      @onChange={{action (mut this.difficulty)}}
+    />
+  </div>
+  <div class="trivia-box-footer">
 
-<div class="result-container" data-test-result-info>
-  {{#each @info as |info|}}
-    {{#if (and (eq this.category info.category) (eq this.difficulty info.difficulty))}}
-      <h1>{{info.category}}</h1>
-      <p>{{info.question}}</p>
-    {{/if}}
-  {{/each}}
+
+    {{this.difficulty}}
+    {{this.category}}
+
+    <LinkTo
+      class="submit-button"
+      @route="trivia-data"
+      @models={{array this.difficulty this.category}}
+      @input={{this.difficulty}}
+      {{action "routeaction" this.difficulty this.category}}
+    >
+      Play
+    </LinkTo>
+
+  </div>
 </div>

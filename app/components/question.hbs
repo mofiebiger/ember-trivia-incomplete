@@ -1,0 +1,43 @@
+{{log @model.lastObject}}
+<div class="trivia-box-container">
+  {{#each @model as |data|}}
+    {{log data.[1]}}
+
+    <div class="trivia-box">
+        <div class="answer-header">
+          <Header
+              @title={{data.question}}
+              @style="plain-header"
+            />
+        </div>
+
+        <div class="answer-body">
+          {{#each data.options as |option|}}
+
+          <!-- "answer-button {{if (eq option this.correctAnswer) "true-button"}}" -->
+          <!-- disabled="{{if (eq this.isAnswered true) false}}" -->
+
+            <button
+              class="answer-button"
+              onClick={{action this.calculateScore data.correct_answer option}}
+              selected={{option}}
+            >
+              {{option}}
+            </button>
+
+          {{/each}}
+        </div>
+
+        <div class="trivia-box-footer">
+          <!-- have a button with onClick which displays next object in array..... -->
+        </div>
+    </div>
+  {{/each}}
+    <LinkTo
+      class="submit-button"
+      @route="result"
+      @query={{hash score=this.score}}
+    >
+      Finish
+    </LinkTo>
+</div>

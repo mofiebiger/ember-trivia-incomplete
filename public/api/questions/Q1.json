@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "questions",
+    "id": "Q1",
+    "attributes": {
+      "question": "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur? ",
+      "correct-answer": "Richard Branson",
+      "options": ["Alan Sugar", "Donald Trump", "Bill Gates", "Richard Branson"]
+    },
+    "category": "General Knowledge",
+    "question-type": "multiple",
+    "difficulty": "Hard"
+  }
+}

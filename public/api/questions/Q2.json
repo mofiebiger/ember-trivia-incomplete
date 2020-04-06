@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "questions",
+    "id": "Q2",
+    "attributes": {
+      "question": "Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?",
+      "correct-answer": "Wales",
+      "options": ["Moldova", "Czech Republic", "Denmark", "Wales"]
+    },
+    "category": "Sports",
+    "question-type": "multiple",
+    "difficulty": "Easy"
+  }
+}

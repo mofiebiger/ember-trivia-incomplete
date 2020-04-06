@@ -5,6 +5,6 @@ export default class QuestionModel extends Model {
   @attr difficulty;
   @attr question;
   @attr correct_answer;
-  @attr incorrect_answers;
+  @attr options;
   @attr question_type;
 }

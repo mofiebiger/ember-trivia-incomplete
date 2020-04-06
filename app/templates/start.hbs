@@ -1,3 +1,49 @@
-<GameInfoSelectors
-  @info={{@model}}
-/>
+<div class="trivia-box-container">
+  <div class="trivia-box">
+    <div class="question-header">
+      <Header
+          @title="Pick your Ember trivia criteria"
+          @style="plain-header"
+        />
+    </div>
+    <div class="answer-body">
+
+      <PowerSelect
+        data-test-select-category
+        @triggerClass="drop-down"
+        @placeholder="Select category"
+        @options={{array "Ember.JS"}}
+        @selected={{this.category}}
+        @onChange={{action (mut this.category)}} as |values|
+      >
+        {{values}}
+      </PowerSelect>
+
+      <PowerSelect
+        data-test-select-difficulty
+        @triggerClass="drop-down"
+        @placeholder="Select difficulty"
+        @options={{array "Easy" "Medium" "Hard"}}
+        @selected={{this.difficulty}}
+        @onChange={{action (mut this.difficulty)}} as |values|
+      >
+        {{values}}
+      </PowerSelect>
+    </div>
+    <div class="trivia-box-footer">
+
+    </div>
+  </div>
+
+  <LinkTo
+    class="submit-button"
+    @route="trivia-data"
+    @query={{hash category=this.category difficulty=this.difficulty}}
+  >
+    Play
+  </LinkTo>
+  <!-- @route="trivia-data.category.difficulty" -->
+  <!-- @models={{array this.category this.difficulty}} -->
+  <!-- @query={{hash category=this.category difficulty=this.difficulty}} -->
+
+</div>
