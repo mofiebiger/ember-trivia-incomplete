@@ -21,7 +21,6 @@ h1 {
 .stylized-header {
   background-color: #22223A;
   color: #D56C2C;
-  display: flex;
   width: 100%;
 	height: auto;
 }
@@ -37,6 +36,7 @@ h1 {
 .plain-header h1 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .application-footer {
@@ -76,21 +76,33 @@ h1 {
 }
 
 .answer-button {
-  height: 75px;
+  height: 200px;
   background-color: #4A4A5D;
   color: #C2C2C9;
-  width: 250px;
+  width: 350px;
   font-size: 20px;
   margin: 20px;
   border-radius: 3px;
   cursor: pointer;
   transition: color .2s ease, background-color .2s ease;
 }
+.answer-button:focus{
+  background-color:red;
+}
 
-button:hover {
+.answer-button:hover {
   transform: scale(1.05);
   background-color: #C2C2C9;
-  color: #D56C2C;
+  color: #4A4A5D;
+  border: 3px solid #4A4A5D;
+}
+
+.right {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
 }
 
 .query-container {

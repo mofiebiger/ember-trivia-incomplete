@@ -7,4 +7,5 @@ export default class QuestionModel extends Model {
   @attr correct_answer;
   @attr options;
   @attr question_type;
+  @attr score;
 }

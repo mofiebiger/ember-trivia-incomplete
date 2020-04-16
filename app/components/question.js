@@ -1,36 +1,53 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
+import { htmlSafe } from '@ember/template';
+import { computed } from '@ember/object';
 
 export default class QuestionComponent extends Component {
-  @tracked isAnswered = false;
-  @tracked questions = [];
-  @tracked correctAnswer;
-  @tracked score;
+  @service store;
 
-  calculateAnswer(correctAnswer, selectedAnswer) {
+  @tracked isAnswered = false;
+  @tracked correct = null;
+
+  /*
+    Component arguments:
+    @id: String,
+    @correctAnswer: String,
+    @question: String,
+    @options: Array,
+    @score: Boolean,
+  */
+
+  @action
+  calculateAnswer(selectedAnswer) {
+    let { id , correctAnswer } = this.args;
+
     this.isAnswered = true;
 
     if (correctAnswer === selectedAnswer) {
-      this.correctAnswer = true;
-      this.questions.push(true);
-      return true;
+
+      this.correct = true;
+
+      this.store.findRecord('question', id).then(function(score) {
+        score.score = true;
+      });
     }
-
-    this.correctAnswer = false;
-    this.questions.push(false);
-
-    return false;
+    else{
+      this.correct = false;
+    }
   }
 
-  calculateScore(correctAnswer, selectedAnswer) {
-    this.calculateAnswer(correctAnswer, selectedAnswer);
+  get style() {
+    let color;
+    if(this.correct === true){
+      color = "green";
+    }
+    if(this.correct === false) {
+      color = "red";
+    }
 
-    console.log(this.questions.length);
-
-    let correct = this.questions.filter(Boolean).length;
-    let total = this.questions.length;
-    this.score = Math.round((correct / total) * 100);
-    console.log(this.score);
-    return this.score;
+    return htmlSafe(`background-color: ${color}`);
   }
 }
